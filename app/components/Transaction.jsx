@@ -46,6 +46,7 @@ const Transaction = () => {
     // function to handle filter with date (data for specefic period of time)
     const handlefilterData = (day) => {
 
+        setCurrentPage(0)
         setDate(`${day == 365 ? "12" : day} ${day == 365 ? "Month" : "Days"} (${formatDate(new Date(new Date().setDate(new Date().getDate() - day)))} - ${formatDate(new Date())})`)
 
 
@@ -83,6 +84,7 @@ const Transaction = () => {
 
 
     const handleChange = (e) => {
+        setCurrentPage(0)
         setSelectedDate(e.target.value);
         setDate(`1 Day (${formatDate(e.target.value)})`)
 
@@ -208,16 +210,13 @@ const Transaction = () => {
                     }
 
 
-                    {/* row 1 */}
-
-                    {/* row 2 */}
 
                 </tbody>
 
 
             </table>
 
-            <div className='flex min-h-14 w-full p-5 justify-between' >
+            <div className='flex flex-col md:flex-row min-h-14 w-full p-5 justify-between' >
                 <div className={`text-md  ${TransactionDataArray?.length <= 0 ? "hidden" : ""}`}>page {currentPage + 1}  of {pages?.length}</div >
                 <div className='text-md pr-12 flex gap-0 '>
 
