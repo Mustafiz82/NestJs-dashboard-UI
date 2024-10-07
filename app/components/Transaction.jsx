@@ -219,14 +219,14 @@ const Transaction = () => {
 
             <div className='flex min-h-14 w-full p-5 justify-between' >
                 <div className={`text-md  ${TransactionDataArray?.length <= 0 ? "hidden" : ""}`}>page {currentPage + 1}  of {pages?.length}</div >
-                <div className='text-md pr-6 flex gap-3 '>
+                <div className='text-md pr-12 flex gap-0 '>
 
                     {
                         TransactionDataArray?.length < 1 ? <p className='text-center'>No Transection Found </p> : ""
                     }
 
                     {
-                        pages.map((page, idx) => <button key={page} onClick={() => setCurrentPage(page)} className={` ${currentPage === page && "text-red-600"}`} >{page + 1}</button>)
+                        pages.map((page, idx) => <button key={page} onClick={() => setCurrentPage(page)} className={`btn rounded-none ${currentPage === page && "  bg-purple-400  text-white"}`} >{page + 1}</button>)
                     }
 
                 </div >

@@ -14,7 +14,7 @@ const BankingNav = () => {
                     <h1 className="text-md lg:text-lg 2xl:text-xl font-semibold">AI Categorisation</h1>
                     <label htmlFor="BasicSwitch_NavigateUI" className="relative flex h-fit w-10 items-center rounded-full border bg-black/10 ">
                         <input type="checkbox" className=" shadow-2xl  scale-110 peer/toggle hidden" id="BasicSwitch_NavigateUI" />
-                        <div className="absolute  inset-0 z-10 w-0 shadow-xl rounded-full duration-200 peer-checked/toggle:w-full peer-checked/toggle:bg-sky-200"></div>
+                        <div className="absolute  inset-0 z-10 w-0 shadow-xl rounded-full duration-200 peer-checked/toggle:w-full peer-checked/toggle:bg-purple-300"></div>
                         <div className="z-20 size-4 rounded-full bg-[#fff] shadow-xl duration-200 peer-checked/toggle:translate-x-6"></div>
                     </label>
                 </div>
