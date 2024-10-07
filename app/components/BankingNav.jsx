@@ -3,14 +3,15 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import Image from "next/image";
 
 const BankingNav = () => {
-    return ( <>        <div className="flex ">
+    return (<>        <div className="">
+        <div className="flex">
             <div className="flex-1">
-                <h1 className="text-3xl  font-semibold">Banking</h1>
+                <h1 className="text-2xl 2xl:text-3xl  font-semibold">Banking</h1>
             </div>
             <div className="flex gap-4 items-center">
-                <div className="flex border-2 border-black/30 rounded-xl p-4 shadow-xl items-center gap-5 ">
+                <div className="md:flex  hidden border-2 border-black/30 rounded-xl p-4 shadow-xl items-center gap-5 ">
                     <SiGooglegemini className="text-xl" />
-                    <h1 className="text-xl font-semibold">AI Categorisation</h1>
+                    <h1 className="text-md lg:text-lg 2xl:text-xl font-semibold">AI Categorisation</h1>
                     <label htmlFor="BasicSwitch_NavigateUI" className="relative flex h-fit w-10 items-center rounded-full border bg-black/10 ">
                         <input type="checkbox" className=" shadow-2xl  scale-110 peer/toggle hidden" id="BasicSwitch_NavigateUI" />
                         <div className="absolute  inset-0 z-10 w-0 shadow-xl rounded-full duration-200 peer-checked/toggle:w-full peer-checked/toggle:bg-sky-200"></div>
@@ -29,12 +30,23 @@ const BankingNav = () => {
                     />
                 </div>
             </div>
-
-
         </div>
-            
-            </>
- );
+
+        <div className="flex my-2  border-2 border-black/30 rounded-xl p-4 shadow-xl items-center gap-5 ">
+            <SiGooglegemini className="text-xl" />
+            <h1 className="text-md flex-1 lg:text-lg 2xl:text-xl font-semibold">AI Categorisation</h1>
+            <label htmlFor="BasicSwitch_NavigateUI" className="relative flex h-fit w-10 items-center rounded-full border bg-black/10 ">
+                <input type="checkbox" className=" shadow-2xl  scale-110 peer/toggle hidden" id="BasicSwitch_NavigateUI" />
+                <div className="absolute  inset-0 z-10 w-0 shadow-xl rounded-full duration-200 peer-checked/toggle:w-full peer-checked/toggle:bg-sky-200"></div>
+                <div className="z-20 size-4 rounded-full bg-[#fff] shadow-xl duration-200 peer-checked/toggle:translate-x-6"></div>
+            </label>
+        </div>
+
+
+    </div>
+
+    </>
+    );
 };
 
 export default BankingNav;
