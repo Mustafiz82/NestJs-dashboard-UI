@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useRef, useState } from 'react';
-import { FaArrowUpLong, FaArrowDownLong } from "react-icons/fa6";
+import { FaArrowUpLong, FaArrowDownLong, FaTabletButton } from "react-icons/fa6";
 import { CiMenuKebab } from "react-icons/ci";
 import { TransectionData } from '../Data/TransectionData';
 
@@ -84,11 +84,12 @@ const Transaction = () => {
 
     const handleChange = (e) => {
         setSelectedDate(e.target.value);
+        setDate(`1 Day (${formatDate(e.target.value)})`)
 
         const date = new Date();
         console.log(e.target.value)
 
-        const filteredData = TransactionDataArray.filter(transaction => {
+        const filteredData = TransectionData.filter(transaction => {
             return transaction.date == e.target.value
         });
 
@@ -108,12 +109,12 @@ const Transaction = () => {
 
             </div>
             <div>
-                <div className="join grid grid-cols-2 lg:grid-cols-5 justify-center text-sm border-2">
+                <div className="join grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 justify-center text-sm border-2">
                     <button onClick={() => handlefilterData(365)} className="btn bg-white border-2 join-item">12 Month</button>
                     <button onClick={() => handlefilterData(30)} className="btn bg-white border-2 join-item">30 Days</button>
                     <button onClick={() => handlefilterData(7)} className="btn bg-white border-2 join-item">7 Days</button>
                     <button onClick={() => handlefilterData(1)} className="btn bg-white border-2 join-item">24 Hours</button>
-                    <button onClick={() => handlefilterData(15)} className="btn bg-white border-2 join-item">
+                    <button className="btn bg-white border-2 join-item">
                         <div className='overflow-hidden'>
                             <input
                                 type="date"

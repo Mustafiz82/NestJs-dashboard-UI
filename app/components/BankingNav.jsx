@@ -32,7 +32,7 @@ const BankingNav = () => {
             </div>
         </div>
 
-        <div className="flex my-2  border-2 border-black/30 rounded-xl p-4 shadow-xl items-center gap-5 ">
+        <div className="flex my-2 md:hidden border-2 border-black/30 rounded-xl p-4 shadow-xl items-center gap-5 ">
             <SiGooglegemini className="text-xl" />
             <h1 className="text-md flex-1 lg:text-lg 2xl:text-xl font-semibold">AI Categorisation</h1>
             <label htmlFor="BasicSwitch_NavigateUI" className="relative flex h-fit w-10 items-center rounded-full border bg-black/10 ">

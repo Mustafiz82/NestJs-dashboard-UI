@@ -23,7 +23,7 @@ const BankAccounts = () => {
 
     return (
         <div>
-            <div className="border flex mt-2 rounded-lg bg-[#f9f9f9]">
+            <div className="border flex lg:inline-block mt-2 rounded-lg bg-[#f9f9f9]">
                 <button className="text-lg 2xl:text-xl bg-white font-medium px-6  py-3 border-[3px]  rounded-lg">Bank Accounts </button>
                 <button className="text-lg 2xl:text-xl font-medium px-6  py-3 border-1  rounded-lg">Bank Cards </button>
                 <button className="text-lg 2xl:text-xl font-medium px-6  py-3 border-1  rounded-lg">Bank Statement </button>
